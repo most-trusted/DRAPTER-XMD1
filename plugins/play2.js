@@ -2,13 +2,13 @@ import axios from "axios";
 import yts from "yt-search";
 import config from '../config.cjs';
 
-const play2 = async (m, gss) => {
+const play = async (m, gss) => {
   const prefix = config.PREFIX;
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(" ")[0].toLowerCase() : "";
   const args = m.body.slice(prefix.length + cmd.length).trim();
 
-  if (cmd === "play2") {
-    if (!args) return m.reply("Please provide a YouTube link or song name\nExample: .play2 Moye Moye\nOr: .play2 https://youtu.be/xyz");
+  if (cmd === "play") {
+    if (!args) return m.reply("Please provide a YouTube link or song name\nExample: .play Moye Moye\nOr: .play2 https://youtu.be/xyz");
 
     try {
       m.reply("🔍 Processing your request...");
