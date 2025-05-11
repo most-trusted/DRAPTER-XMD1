@@ -46,5 +46,5 @@ const play = async (m, gss) => {
   }
 };
 
-export default play2;
+export default play;
     
